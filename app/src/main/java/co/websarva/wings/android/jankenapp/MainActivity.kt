@@ -22,6 +22,7 @@ class MainActivity : AppCompatActivity() {
 
     fun onJankenButtonTapped(view: View?){
         val intent = Intent(this,ResultActivity::class.java)
+        intent.putExtra("MY_HAND", view?.id)
         startActivity(intent)
     }
 
