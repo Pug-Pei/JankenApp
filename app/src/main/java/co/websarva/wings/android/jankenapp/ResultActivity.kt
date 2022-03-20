@@ -26,8 +26,9 @@ class ResultActivity : AppCompatActivity() {
                 binding.myHandImage.setImageResource(R.drawable.choki)
                 choki
             }
-            R.id.pa-> {binding.myHandImage.setImageResource(R.drawable.pa)
-            pa
+            R.id.pa ->
+                {binding.myHandImage.setImageResource(R.drawable.pa)
+                 pa
             }
             else -> gu
         }
@@ -35,8 +36,8 @@ class ResultActivity : AppCompatActivity() {
         val comHand = (Math.random() * 3).toInt()
         when(comHand) {
             gu -> binding.comHandImage.setImageResource(R.drawable.com_gu)
-            choki -> binding.myHandImage.setImageResource(R.drawable.com_choki)
-            pa -> binding.myHandImage.setImageResource(R.drawable.com_pa)
+            choki -> binding.comHandImage.setImageResource(R.drawable.com_choki)
+            pa -> binding.comHandImage.setImageResource(R.drawable.com_pa)
         }
 
         //勝敗の判定をする
@@ -46,5 +47,6 @@ class ResultActivity : AppCompatActivity() {
             1 -> binding.resultLabel.setText(R.string.result_win) //あなたの勝ち
             2 -> binding.resultLabel.setText(R.string.result_lose) //あなたの負け
         }
+        binding.backButton.setOnClickListener { finish() }
     }
 }
