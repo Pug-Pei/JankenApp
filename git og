@@ -1,0 +1,11 @@
+[33mcommit 0760cf4ef26abba7c67953aa6650e9d6299c91ae[m[33m ([m[1;36mHEAD -> [m[1;32mdevelop[m[33m)[m
+Author: kouhei <grimpoteuthistako@gmail.com>
+Date:   Wed Mar 16 00:42:37 2022 +0900
+
+    gradleにviewBidingを追加。じゃんけんの画像を追加。
+
+[33mcommit 7f20206863a92cf222335c48a16725c295239075[m[33m ([m[1;31morigin/master[m[33m, [m[1;32mmaster[m[33m)[m
+Author: kouhei <grimpoteuthistako@gmail.com>
+Date:   Mon Mar 14 23:13:13 2022 +0900
+
+    Initial commit
