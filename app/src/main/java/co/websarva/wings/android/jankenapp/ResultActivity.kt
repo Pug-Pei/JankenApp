@@ -2,10 +2,12 @@ package co.websarva.wings.android.jankenapp
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import androidx.preference.PreferenceManager
 import co.websarva.wings.android.jankenapp.databinding.ActivityResultBinding
 
 class ResultActivity : AppCompatActivity() {
+    val Tag: String = "ResultActivity"
     val gu = 0
     val choki = 1
     val pa = 2
@@ -48,6 +50,10 @@ class ResultActivity : AppCompatActivity() {
             1 -> binding.resultLabel.setText(R.string.result_win) //あなたの勝ち
             2 -> binding.resultLabel.setText(R.string.result_lose) //あなたの負け
         }
+
+        //じゃんけんの結果を保存する
+        saveData(myHand, comHand, gameResult)
+
         binding.backButton.setOnClickListener { finish() }
     }
 
@@ -74,6 +80,11 @@ class ResultActivity : AppCompatActivity() {
             .putInt("BEFORE_LAST_COM_HAND", lastComHand)
             .putInt("GAME_RESULT", gameResult)
             .apply()
+
+             Log.d(Tag,
+                 "lastGameResult:$lastGameResult\n" +
+                      "gameResult:$gameResult\n" +
+                      "winningStreakCount:$winningStreakCount")
     }
 
     private fun getHand(): Int{
